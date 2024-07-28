@@ -1,0 +1,39 @@
+.container{
+    position: relative;
+    text-align: center;
+}
+.popup{
+    position: absolute;
+    border: solid black 2px;
+    padding: 20px;
+    top:30%;
+    left: 40%;
+    display: none;
+    text-align: center;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#2a292a;
+    color: white;
+    border-radius: 10px;
+    padding: 15px; 
+    cursor: pointer;
+    font-size: 18px;
+   
+}
+input{
+    cursor: pointer;
+}
+
+@media screen and (min-width:600px) 
+{
+    .popup{
+        position: relative;
+        left: 2%;
+        width: 90%;
+        margin-left: 10px;
+        top:150px
+    }  
+}

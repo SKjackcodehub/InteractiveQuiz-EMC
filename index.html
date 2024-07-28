@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div style="text-align: center; margin-top: 10% ; border: solid black 2px;   margin-top: 0;">
+            <h1>Interactive Quiz</h1>
+        </div>
+        <div>
+        <h2>1. Which planet is known as the Red Planet?</h2>
+        <input type="radio" id="correct1" >A. Mars
+        <input type="radio" >B. Jupiter
+        <input type="radio" >C. Saturn
+        <input type="radio" >D. Venus
+        </div>
+        <div>
+        <h2>2. Who wrote the play "Romeo and Juliet"?</h2>
+        <input type="radio" >A. Charles Dickens
+        <input type="radio" id="correct2" >B. William Shakespeare
+        <input type="radio" >C. Mark Twain
+        <input type="radio" >D. Jane Austen
+        </div>
+        <div>
+        <h2>3. Which element has the chemical symbol 'O'?</h2>
+        <input type="radio"  >A. Gold
+        <input type="radio" >B. Silver
+        <input type="radio"  >C. Helium
+        <input type="radio" id="correct3">D. Oxygen
+        </div>
+        <div>
+        <h2>4. What is the capital of Japan?</h2>
+        <input type="radio" >A. Bangkok
+        <input type="radio" >B. Seoul
+        <input type="radio" id="correct4">C. Tokyo
+        <input type="radio" >D. Beijing
+        </div>
+        <div>
+        <h2>5. Which animal is known for its ability to change color?</h2>
+        <input type="radio"  >A. Elephant
+        <input type="radio" id="correct5" >B. Chameleon
+        <input type="radio"  >C. Lion
+        <input type="radio" >D. Dolphin
+        </div>
+    </div>
+    <br>
+    <button id="submit">Submit</button>
+
+
+<div class="popup">
+<h1>Interactive Quiz</h1>
+<h2>Quiz Result</h2>
+<p id="result"></p>
+
+</div>
+<script>
+    var submit=document.getElementById("submit")
+       var result = document.getElementById("result")
+       var container = document.querySelector(".container")
+       var popup = document.querySelector(".popup")
+       submit.addEventListener("click",function(){
+        var score=0
+        if(document.getElementById("correct1").checked){
+            score=score+1
+        }
+        if(document.getElementById("correct2").checked){
+            score=score+1
+        }
+        if(document.getElementById("correct3").checked){
+            score=score+1
+        }
+        if(document.getElementById("correct4").checked){
+            score=score+1
+        }
+        if(document.getElementById("correct5").checked){
+            score=score+1
+        }
+        
+        
+        result.textContent="your score is : " +score
+        container.style.display="none"
+        popup.style.display="block"
+       }
+    ) 
+</script>
+    
+</body>
+</html>
